@@ -5,15 +5,8 @@ import SearchBar from './components/search_bar';
 import VideoList from './components/video_list'
 
 
-<<<<<<< HEAD
 const API_KEY = 'AIzaSyC_XgR2Rb_ji392bYiI5qwp97yuvA07Hgg';
 
-=======
-const API_KEY = '';
-YTSearch({ key: API_KEY, term: 'surfboards' }, function (data) {
-    console.log(data)
-});
->>>>>>> 40f1e80216ff442ccd2a10d6fd0f49158729759a
 // Create a new component, 
 //this component should produce some HTML
 class App extends Component {
@@ -33,7 +26,7 @@ class App extends Component {
         return (
             <div>
                 <SearchBar />
-                <VideoList/>
+                <VideoList videos = {this.state.videos}/>
             </div>
         )
     }
