@@ -37,11 +37,11 @@ class App extends Component {
     render() {
         /** Lo que hace debounce es tomar la arrow function y solo la vamos a poder llamar cada
          * 300 milisegundos**/
-        const videoSearch = _.debounce((term => {this.videoSearch(term)}, 300));
+        const videoSearch = _.debounce((term) => {this.videoSearch(term)}, 300);
 
         return (
             <div>
-                <SearchBar onSearchTermChange={term => this.videoSearch}/>
+                <SearchBar onSearchTermChange={videoSearch}/>
                 <VideoDetail video={this.state.selectedVideo}/>
                 <VideoList 
                 onVideoSelect ={selectedVideo=>this.setState({selectedVideo})}
